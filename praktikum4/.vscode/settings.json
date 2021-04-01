@@ -1,0 +1,8 @@
+{
+    "editor.fontSize": 14,
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "vscode-icons",
+    "java.project.outputPath": "bin",
+    "editor.formatOnSave": true,
+}
