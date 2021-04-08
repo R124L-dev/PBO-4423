@@ -4,7 +4,7 @@ class siswa {
     private String nama;
     private int teori;
     private int praktek;
-    public void setSiswa(String nim, String nama, int teori, int praktek){
+    public siswa(String nim, String nama, int teori, int praktek) {
         this.nim = nim;
         this.nama = nama;
         this.teori = teori;
@@ -37,26 +37,25 @@ class siswa {
 }
 
 public class NilaiSiswa {
+   
 
     public static void main(String[] args) {
-        siswa siswa = new siswa();
-        ArrayList<siswa> tabsiswa = new ArrayList<siswa>();
-        siswa.setSiswa("A11.2019.12070", "Rizal Fadlullah", 100, 100);
-        tabsiswa.add(siswa);
-        siswa.setSiswa("A11.2019.12453", "Ridwan", 90, 77);
-        tabsiswa.add(siswa);
-        siswa.setSiswa("A11.2019.12234", "Naufal", 80, 95);
-        tabsiswa.add(siswa);
-        siswa.setSiswa("A11.2019.12564", "Jatayu", 85, 88);
-        tabsiswa.add(siswa);
-        System.out.println();
-        for (int counter =0; counter < tabsiswa.size(); counter++) {
-            System.out.println("NIM\t:"+tabsiswa.get(counter).getNim());
-            System.out.println("Nama\t:"+tabsiswa.get(counter).getNama());
-            System.out.println("Teori\t:"+tabsiswa.get(counter).getTeori());
-            System.out.println("Praktek\t:"+tabsiswa.get(counter).getPraktek());
-            System.out.println("----------------------------------------------");
+       
+        ArrayList<siswa> tabsiswa = new ArrayList<>();
+        for (int counter = 0; counter < 10; counter++){
+            siswa s = new siswa("lkajdf","Rizal", counter,100);
+            tabsiswa.add(s);
         }
+        for(siswa s:tabsiswa){
+            System.out.println(s.getTeori());
+        };
+        // for (int counter =0; counter < tabsiswa.size(); counter++) {
+        //     System.out.println("NIM\t:"+tabsiswa.get(counter).getNim());
+            // System.out.println("Nama\t:"+tabsiswa.get(counter).getNama());
+        //     System.out.println("Teori\t:"+tabsiswa.get(counter).getTeori());
+        //     System.out.println("Praktek\t:"+tabsiswa.get(counter).getPraktek());
+        //     System.out.println("----------------------------------------------");
+        // }
       
     }
 }
