@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -57,7 +58,6 @@ public class NilaiSiswa extends JFrame {
             "NIM", "NAMA", "TEORI", "PRAKTEK"
         });
         JTable tabel = new JTable(model);
-
         Scanner sc = new Scanner(System.in);
         ArrayList<siswa> tabsiswa = new ArrayList<>();
         System.out.print("Masukkan Jumlah Data\t: ");
@@ -87,8 +87,11 @@ public class NilaiSiswa extends JFrame {
         scroll.setViewportView(tabel);
         
         getContentPane().add(scroll);
+
+        JLabel label = new JLabel();
+        label.setText("Total Siswa : " + tabsiswa.size());
     }
     public static void main(String[] args) {
-        NilaiSiswa obj = new NilaiSiswa();
+        new NilaiSiswa();
     }
 }
